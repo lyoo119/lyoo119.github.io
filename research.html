@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Junil Ryu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-wrap">
+
+    <nav class="top-nav">
+        <a class="nav-brand" href="index.html">J. Ryu's Academic Website </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html" class="active">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="cv.html">CV</a>
+        </div>
+    </nav>
+
+     <!-- ── RESEARCH GALLERY ── -->
+    <!-- Each card: swap the pattern-N div for a real <video> once you have clips.
+         Example:
+         <video class="research-card-video" autoplay muted loop playsinline poster="research/marangoni-poster.jpg">
+             <source src="research/marangoni.mp4" type="video/mp4">
+         </video>
+    -->
+    <section class="section" id="gallery">
+        <h2 class="section-title">Gallery of research</h2>
+        <div class="research-gallery">
+            <div class="research-card">
+                <div class="research-card-img pattern-1">
+                    <video class="research-card-video" autoplay muted loop playsinline poster="research/marangoni-poster.jpg">
+             		<source src="IPA_dewetting.mp4" type="video/mp4">
+         	    </video>
+                </div>
+                <div class="research-card-keywords">
+                    <span class="skill-tag">Vapor-mediated actuation</span>
+                    <span class="skill-tag">Fingering instability</span>
+		    <span class="skill-tag">Solubility</span>
+                </div>
+            </div>
+            <div class="research-card">
+                <div class="research-card-img pattern-2">
+                    <video class="research-card-video" autoplay muted loop playsinline poster="research/marangoni-poster.jpg">
+             		<source src="Double_emulsion.mp4" type="video/mp4">
+         	    </video>
+                </div>
+                <div class="research-card-keywords">
+                    <span class="skill-tag">Microfluidics</span>
+                    <span class="skill-tag">Double emulsion drop stability</span>
+                    <span class="skill-tag">Lipid vesicle</span>
+                </div>
+            </div>
+            <div class="research-card">
+                <div class="research-card-img pattern-3">
+                    <video class="research-card-video" autoplay muted loop playsinline poster="research/marangoni-poster.jpg">
+             		<source src="IP_SDS.mp4" type="video/mp4">
+         	    </video>
+                </div>
+                <div class="research-card-keywords">
+                    <span class="skill-tag">Interfacial polymerization</span>
+                    <span class="skill-tag">Surfactant-mediated Marangoni</span>
+                </div>
+            </div>
+	    <div class="research-card">
+                <div class="research-card-img pattern-4">
+                    <video class="research-card-video" autoplay muted loop playsinline poster="research/marangoni-poster.jpg">
+             		<source src="Mixing.mp4" type="video/mp4">
+         	    </video>
+                </div>
+                <div class="research-card-keywords">
+                    <span class="skill-tag">Vapor-driven solutal Marangoni</span>
+                    <span class="skill-tag">Contactless droplet mixing</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Junil Ryu &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
+</div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Junil Ryu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-wrap">
+
+    <nav class="top-nav">
+        <a class="nav-brand" href="index.html">J. Ryu's Academic Website </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="cv.html" class="active">CV</a>
+        </div>
+    </nav>
+
+    <!-- ── EXPERIENCE ── -->
+    <section class="section" id="experience">
+        <div class="section-label">01 — Experience</div>
+        <h2 class="section-title">Professional & Teaching</h2>
+        <div class="pub-group-title">Professional</div>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-date">2025–Present</div>
+                <div class="tl-body">
+                    <div class="tl-role">Postdoctoral Researcher</div>
+                    <div class="tl-place">Dept. of Mechanical Engineering, KAIST, South Korea</div>
+                    <div class="tl-advisor">Advisor: Prof. Hyoungsoo Kim</div>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2022–2023</div>
+                <div class="tl-body">
+                    <div class="tl-role">Visiting Fellow</div>
+                    <div class="tl-place">Experimental Soft Condensed Matter Group, SEAS, Harvard University, USA</div>
+                    <div class="tl-advisor">Advisor: Prof. David A. Weitz</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-group-title">Teaching</div>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-date">2019–2024</div>
+                <div class="tl-body">
+                    <div class="tl-role">Teaching Assistant | KAIST</div>
+                    <ul class="tl-sub">
+                        <li><strong>Graduate:</strong> Interfacial Flows, Experimental Thermo-Fluid Engineering</li>
+                        <li><strong>Undergraduate:</strong> Fluid Mechanics, Capstone Design I, Mechatronics System Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section class="section" id="education">
+        <div class="section-label">02 — Education</div>
+        <h2 class="section-title">Academic Background</h2>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-date">2021–2025</div>
+                <div class="tl-body">
+                    <div class="tl-role">Ph.D. in Mechanical Engineering, KAIST, South Korea</div>
+                    <div class="tl-advisor">Advisor: Prof. Hyoungsoo Kim</div>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2019–2021</div>
+                <div class="tl-body">
+                    <div class="tl-role">M.S. in Mechanical Engineering, KAIST, South Korea</div>
+                    <div class="tl-advisor">Advisor: Prof. Hyoungsoo Kim</div>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2015–2019</div>
+                <div class="tl-body">
+                    <div class="tl-role">B.S. in Mechanical Engineering, KAIST, South Korea</div>
+                    <div class="tl-advisor">Advisor: Prof. Jeong-Guon Ih</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── AWARDS ── -->
+    <section class="section" id="awards">
+        <div class="section-label">03 — Awards</div>
+        <h2 class="section-title">Honors & Recognition</h2>
+        <ul class="awards-list">
+            <li class="award-item">
+                <span class="award-year">12/2025</span>
+                <span class="award-text">ME Academic and Research Achievement Award: President's Award of the Korea Institute of Machinery &amp; Materials (KIMM), KAIST</span>
+            </li>
+            <li class="award-item">
+                <span class="award-year">04/2025</span>
+                <span class="award-text">Outstanding PhD's Thesis Award, The Korean Society of Mechanical Engineers (KSME)</span>
+            </li>
+            <li class="award-item">
+                <span class="award-year">10/2021</span>
+                <span class="award-text">ME Academic and Research Achievement Award: Excellence Award for Master's Program Students, KAIST</span>
+            </li>
+            <li class="award-item">
+                <span class="award-year">06/2021</span>
+                <span class="award-text">Outstanding Master's Thesis Award, The Korean Society of Mechanical Engineers (KSME)</span>
+            </li>
+            <li class="award-item">
+                <span class="award-year">12/2020</span>
+                <span class="award-text">Wooduk Deok-Byeong Yoon Scholarship, Wooduk Scholarship Foundation</span>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Junil Ryu &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
+</div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.section').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
