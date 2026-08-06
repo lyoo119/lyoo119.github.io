@@ -227,7 +227,7 @@
 
         /* ── SECTIONS ── */
         .section {
-            padding: 52px 0 32px;
+            padding: 32px 0 32px;
             border-bottom: 1px solid var(--border);
         }
 
